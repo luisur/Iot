@@ -1,0 +1,23 @@
+Descripcion del sistema "Waste Disposal"
+----------------------------------------
+
+    Nuestro sistema se trata de un waste disposal, o basura inteligente, que nos servira para llevar un mejor control de nuestro reciclaje
+y del estado de los desechos. Para este proyecto decidimos incorporar: una balanza, un ultrasonido, un sensor de temperatura/humedad, 
+una camara, 2 leds rojos y 1 buzzer. El sistema estara capacitado para informar a su usuario de su estado, cuando la basura este 
+cerca de llenarse un led y un buzzer se activaran a modo de aviso, cuando la balanza coge peso en exceso se activa un led y cuando la 
+temperatura o humedad superen los 25 grados sera otro led el que de el aviso.
+Ademas lo hemos codificado de manera que cuando alguna de estas excepciones sea lanzada suba un tweet a la plataforma twitter con un  
+pequeño mensaje que incluye la temperatura.
+
+PruebaMain.py: este es el Main del proyecto. todas las funciones se encuentran aqui.
+
+distance_sensor.py: este es el controlador del sensor de distancia, si detecta que la basura esta llena se enciende un led,
+                 se activa el buzzer con tres pitidos y se envia un tweet.
+
+Balanza.py : este es el controlador de la balanza, si la balanza supera los 4 kilos de peso se enciende un led.
+
+AdafruitDHT.py: este es el modulo que hemos usado para la medicion de la temperatura y humedad.
+
+auth.py: esta clase son las tokens y claves para conectarnos a la API de twitter para la fucnion de enviar tweets.
+
+Hx711.py: La clase encargada de gestionar la funcionalidad de la balanza que pesara el contenido del waste disposal.
